@@ -21,10 +21,9 @@ select title from sakila.film
 where title like '%DATE%'
 
 -- Get 10 films with the longest title.
-Select title from sakila.film
-order by title asc
+Select title,length(title) as l from sakila.film
+order by l desc
 limit 10
--- I AM NOT SURE IF IT IS REALLY GIVING ME THE LONGEST TITLES. 
 
 -- Get 10 the longest films.
 Select title,length from sakila.film
